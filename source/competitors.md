@@ -174,7 +174,7 @@ Trimble — один из ведущих мировых производител
 
 - Стоимость на 06.2025 89000 руб.
 
-  [Официальный сайт](https://credo-dialogue .ru/produkty/tim-kredo-dat.html)
+  [Официальный сайт](https://credo-dialogue.ru/produkty/tim-kredo-dat.html)
 
 #### Преимущества
 
