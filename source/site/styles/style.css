@@ -1,42 +1,98 @@
-div.container {
-    width: 100%;
-    border: 1px solid gray;
+* {
+    box-sizing: border-box;
 }
 
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: rgb(7, 121, 142);
-    clear: left;
-    text-align: center;
-}
-
-nav {
-    float: left;
-    max-width: 40%;
-    margin: 0;
-    padding: 1em;
-}
-
-nav ul {
-    list-style-type: none;
+html, body {
     padding: 0;
-}
-   
-nav ul a {
-    text-decoration: none;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-article {
-    float: left;
-    height: auto;
-    max-width: 60%;
-    /* margin-left: 170px; */
-    border-left: 1px solid gray;
+:root[theme='light'] {
+    --panel-bg-color: #dfe4ea;
+    --container-bg-color: #f1f2f6;
+    --sidebar-bg-color: #f1f2a6;
+    --text-color: #2f3542;
+}
+
+:root {
+    --panel-bg-color: #2f3542;
+    --container-bg-color: #57606f;
+    --sidebar-bg-color: #666e7c;
+    --text-color: #ced6e0;
+}
+
+body {
+    font-size: 1.1em;
     padding: 1em;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-button {
-    width: 200px;
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+    flex: 1 1 12em;
+    padding: 1em;
+}
+
+.nav, .sidebar {
+    flex: 1;
+    background-color: var(--sidebar-bg-color);
+    color: var(--text-color);
+}
+
+.header, .footer {
+    flex: 0 0 5em;
+    background-color: var(--panel-bg-color);
+    color: var(--text-color);
+    counter-reset: var(--text-color);
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        min-height: 100vh;
+
+    }
+
+    .main {
+        flex-direction: row;
+        min-height: 100%;
+        flex: 1 1 auto;
+    }
+
+    .content {
+        flex: 1 1 80em;
+    }
+
+    ul.menu {
+        margin-left: 0em;
+        padding-left: 0em;
+        list-style: none;
+    }
+
+    .menu li {
+        display: inline;
+    }
+
+    ul.menu a {
+        display: inline-block;
+        width: 10em;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border: 1px dashed #333;
+        text-decoration: none;
+        color: #333;
+        text-align: center;
+    }
+
+    ul.menu a:hover {
+        background-color: #333;
+        color: #f4f4f4;
+    }
 }
