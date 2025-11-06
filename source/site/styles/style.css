@@ -17,7 +17,8 @@ html, body {
 
 :root {
     --panel-bg-color: #2f3542;
-    --container-bg-color: #57606f;
+    /* --container-bg-color: #57606f; */
+    --container-bg-color: #89bf8d;
     --sidebar-bg-color: #666e7c;
     --text-color: #ced6e0;
 }
@@ -35,10 +36,93 @@ body {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     background-color: var(--container-bg-color);
+    border: 2px outset #bab6b7;
+    margin: 2px;
     color: var(--text-color);
     flex: 1 1 12em;
-    padding: 1em;
+    padding: 2px;
+}
+
+.panel-station, .panel-stations, .panel-measurements, .scrollpanel-stations, .scrollpanel-measurements {
+    /* background-color: var(--container-bg-color); */
+    border: 2px outset #bab6b7;
+    margin: 2px;
+    /* color: var(--text-color); */
+}
+
+.panel-stations, .panel-measurements {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.scrollpanel-stations {
+    height: auto;
+    flex: 1 1 auto;
+}
+
+.scrollpanel-measurements {
+    /* background-color: red; */
+    height: auto;
+    flex: 1 1 auto;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 0 auto;
+    height: 30px;
+    margin: 2px;
+    border: 2px outset #bab6b7;
+}
+
+.button {
+    height: 20px;
+    width: 20px;
+    border: 1px outset #bab6b7;
+    margin-left: 5px;
+}
+
+.button:hover {
+    border: 1px inset red;
+}
+
+.toolbar-separator {
+    height: 20px;
+    width: 20px;
+}
+
+.button.delete {
+    background-image: url(/images/delete_row.png);
+}
+
+.button.insert-before {
+    background-image: url(/images/insert_row.png);
+}
+
+.button.insert-after {
+    background-image: url(/images/insert_row_after.png);
+}
+
+.button.change-distance {
+    background-image: url(/images/change_distance.png);
+}
+
+.button.change-direction {
+    background-image: url(/images/change_direction.png);
+}
+
+.button.change-tilt {
+    background-image: url(/images/change_tilt.png);
+}
+
+.panel-basis {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav, .sidebar {
@@ -67,7 +151,25 @@ body {
     }
 
     .content {
+        flex-direction: row;
         flex: 1 1 80em;
+    }
+
+    .panel-basis {
+        flex-direction: column;
+        flex: 1 1 40%;
+    }
+
+    .panel-station {
+        height: 50%;
+    }
+
+    .panel-stations {
+        height: 50%;
+    }
+
+    .panel-measurements {
+        flex: 1 1 60%;
     }
 
     ul.menu {
