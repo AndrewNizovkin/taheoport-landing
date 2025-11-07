@@ -46,7 +46,12 @@ body {
     padding: 2px;
 }
 
-.panel-station, .panel-stations, .panel-measurements, .scrollpanel-stations, .scrollpanel-measurements {
+.panel-survey {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-station, .panel-stations, .panel-measurements, .scrollpanel-stations, .scrollpanel-measurements, .panel-survey {
     /* background-color: var(--container-bg-color); */
     border: 2px outset #bab6b7;
     margin: 2px;
@@ -94,6 +99,30 @@ body {
 .toolbar-separator {
     height: 20px;
     width: 20px;
+}
+
+.button.new {
+    background-image: url(/images/new.png);
+}
+
+.button.open {
+    background-image: url(/images/open.png);
+}
+
+.button.import {
+    background-image: url(/images/import.png);
+}
+
+.button.save {
+    background-image: url(/images/save.png);
+}
+
+.button.run {
+    background-image: url(/images/run.png);
+}
+
+.button.catalog {
+    background-image: url(/images/database.png);
 }
 
 .button.delete {
@@ -151,8 +180,13 @@ body {
     }
 
     .content {
+        flex-direction: column;
+        flex: 1 1 80%;
+    }
+
+    .panel-survey {
         flex-direction: row;
-        flex: 1 1 80em;
+        flex: 1 1 auto;
     }
 
     .panel-basis {

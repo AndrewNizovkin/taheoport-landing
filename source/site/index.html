@@ -13,8 +13,8 @@
 <body>
   <div class="header">
     <ul class="menu">
-      <li><a href="#">Главная</a></li>
-      <li><a href="#">Задачи</a></li>
+      <li><a href="#">Файл</a></li>
+      <li><a href="#">Инструменты</a></li>
       <li><a href="#">Поддержка</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
@@ -22,32 +22,51 @@
   <div class="main">
     <div class="nav">Navigation</div>
     <div class="content">
-      <div class="panel-basis">
-        <div class="panel-station"><h2>panel-station</h2></div>
-        <div class="panel-stations">
+
+      <div class="toolbar">
+        <div class="button new"></div>
+        <div class="button open"></div>
+        <div class="button import"></div>
+        <div class="button save"></div>
+        <div class="toolbar-separator"></div>
+        <div class="button run"></div>
+        <div class="button catalog"></div>
+      </div>
+
+      <div class="panel-survey">
+        
+        <div class="panel-basis">
+          <div class="panel-station"><h2>panel-station</h2></div>
+          <div class="panel-stations">
+            <div class="toolbar">
+              <div class="button delete"></div>
+              <div class="button insert-before"></div>
+              <div class="button insert-after"></div>
+            </div>
+            <div class="scrollpanel-stations"><h2>scrollpanel-stations</h2></div>
+          </div>
+        </div>
+
+        <div class="panel-measurements">
           <div class="toolbar">
             <div class="button delete"></div>
             <div class="button insert-before"></div>
             <div class="button insert-after"></div>
+            <div class="toolbar-separator"></div>
+            <div class="button change-distance"></div>
+            <div class="button change-direction"></div>
+            <div class="button change-tilt"></div>
           </div>
-          <div class="scrollpanel-stations"><h2>scrollpanel-stations</h2></div>
-        </h2></div>
-      </div>
-      <div class="panel-measurements">
-        <div class="toolbar">
-          <div class="button delete"></div>
-          <div class="button insert-before"></div>
-          <div class="button insert-after"></div>
-          <div class="toolbar-separator"></div>
-          <div class="button change-distance"></div>
-          <div class="button change-direction"></div>
-          <div class="button change-tilt"></div>
+          <div class="scrollpanel-measurements"><h2>scrollpanel-measurements</h2></div>
         </div>
-        <div class="scrollpanel-measurements"><h2>scrollpanel-measurements</h2></div>
+
       </div>
+
     </div>
+
     <div class="sidebar">Sidebar</div>
   </div>
+  
   <div class="footer">Footer</div>
 </body>
 </html>
