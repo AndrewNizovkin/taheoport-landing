@@ -8,14 +8,15 @@ html, body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-:root[theme='light'] {
+:root {
     --panel-bg-color: #dfe4ea;
-    --container-bg-color: #f1f2f6;
+    /* --container-bg-color: #f1f2f6; */
+    --container-bg-color: #89bf8d;
     --sidebar-bg-color: #f1f2a6;
     --text-color: #2f3542;
 }
 
-:root {
+:root[theme='dark'] {
     --panel-bg-color: #2f3542;
     /* --container-bg-color: #57606f; */
     --container-bg-color: #89bf8d;
@@ -58,21 +59,44 @@ body {
     /* color: var(--text-color); */
 }
 
-.panel-stations, .panel-measurements {
+.panel-stations, .panel-measurements, .panel-basis {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    /* justify-content: start; */
 }
 
 .scrollpanel-stations {
     height: auto;
     flex: 1 1 auto;
+    overflow: auto;
+}
+
+ul.list-stations {
+    list-style: none;
+}
+
+ul.list-stations a {
+    display: block;
+    width: auto;
+    padding: 5px;
+    text-decoration: none;
 }
 
 .scrollpanel-measurements {
     /* background-color: red; */
     height: auto;
     flex: 1 1 auto;
+    overflow: auto;
+}
+
+.picket {
+    width: 8em;
+}
+
+.menu-item:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
 
 .toolbar {
@@ -191,7 +215,7 @@ body {
 
     .panel-basis {
         flex-direction: column;
-        flex: 1 1 40%;
+        flex: 1 1 50%;
     }
 
     .panel-station {
@@ -203,7 +227,7 @@ body {
     }
 
     .panel-measurements {
-        flex: 1 1 60%;
+        flex: 1 1 50%;
     }
 
     ul.menu {
