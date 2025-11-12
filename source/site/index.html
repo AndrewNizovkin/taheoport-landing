@@ -12,11 +12,13 @@
 </head>
 <body>
   <div class="header">
+    <!-- <div>☰</div> -->
     <ul class="menu">
       <li><a href="#">Файл</a></li>
       <li><a href="#">Инструменты</a></li>
       <li><a href="#">Поддержка</a></li>
       <li><a href="#">Контакты</a></li>
+      <li><a href="#" id="reg">Вход/Регистрация</a></li>
     </ul>
   </div>
   <div class="main">
@@ -24,58 +26,18 @@
     <div class="content">
 
       <div class="toolbar">
-        <div class="button new"></div>
-        <div class="button open"></div>
-        <div class="button import"></div>
-        <div class="button save"></div>
+        <div class="button new" title="Создать"></div>
+        <div class="button open" title="Открыть"></div>
+        <div class="button import" title="Импорт из файла"></div>
+        <div class="button save" title="Сохранить"></div>
         <div class="toolbar-separator"></div>
-        <div class="button run"></div>
-        <div class="button catalog"></div>
+        <div class="button run" title="Обработать"></div>
+        <div class="button catalog" title="Установить каталог"></div>
       </div>
 
       <div class="panel-survey">
         
         <div class="panel-basis">
-          <div class="panel-station">
-            <table class="table-station">
-              <caption>Параметры станции</caption>
-              <tbody>
-                <tr>
-                  <td class="menu-item">Название станции</td>
-                  <td><input type="text" name="stationName" placeholder="noname"/></td>
-                </tr>
-                <tr>
-                  <td>X:</td>
-                  <td><input type="text" name="stationX" placeholder="0.000"/></td>
-                </tr>
-                <tr>
-                  <td>Y:</td>
-                  <td><input type="text" name="stationY" placeholder="0.000"/></td>
-                </tr>
-                <tr>
-                  <td>Z:</td>
-                  <td><input type="text" name="stationZ" placeholder="0.000"/></td>
-                </tr>
-                <tr>
-                  <td>Высота инструмента</td>
-                  <td><input type="text" name="stationI" placeholder="0.000"/></td>
-                </tr>
-                <tr>
-                  <td class="menu-item">Название ориентира</td>
-                  <td><input type="text" name="orName" placeholder="noname"/></td>
-                </tr>
-                <tr>
-                  <td>X:</td>
-                  <td><input type="text" name="orX" placeholder="0.000"/></td>
-                </tr>
-                <tr>
-                  <td>Y:</td>
-                  <td><input type="text" name="orY" placeholder="0.000"/></td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
           <div class="panel-stations">
             <div class="toolbar">
               <div class="button delete"></div>
@@ -100,6 +62,48 @@
               </ul>
             </div>
           </div>
+
+          <div class="panel-station">
+            <table class="table-station">
+              <caption>Параметры станции</caption>
+              <tbody>
+                <tr>
+                  <td class="menu-item" title="Вставить из каталога">Станция</td>
+                  <td><input type="text" name="stationName" placeholder="noname"/></td>
+                </tr>
+                <tr>
+                  <td>X:</td>
+                  <td><input type="text" name="stationX" placeholder="0.000"/></td>
+                </tr>
+                <tr>
+                  <td>Y:</td>
+                  <td><input type="text" name="stationY" placeholder="0.000"/></td>
+                </tr>
+                <tr>
+                  <td>Z:</td>
+                  <td><input type="text" name="stationZ" placeholder="0.000"/></td>
+                </tr>
+                <tr>
+                  <td>i:</td>
+                  <td><input type="text" name="stationI" placeholder="0.000"/></td>
+                </tr>
+                <tr>
+                  <td class="menu-item" title="Вставить из каталога">Ориентир</td>
+                  <td><input type="text" name="orName" placeholder="noname"/></td>
+                </tr>
+                <tr>
+                  <td>X:</td>
+                  <td><input type="text" name="orX" placeholder="0.000"/></td>
+                </tr>
+                <tr>
+                  <td>Y:</td>
+                  <td><input type="text" name="orY" placeholder="0.000"/></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
         </div>
 
         <div class="panel-measurements">
